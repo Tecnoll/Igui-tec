@@ -5,14 +5,14 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
-driver = webdriver.Chrome('chromedriver_linux64/chromedriver')
+driver = webdriver.Chrome('')#Coloque o caminho para o driver
 
 driver.get("https://web.whatsapp.com/")
 wait = WebDriverWait(driver, 600)
 
-target = '"Friend\'s Name"'
+target = '""'#Coloque aqui o nome completo do contacto
 
-message = "Hello World!!!"
+message = "Coloque a mensagem aqui"
 
 x_arg = '//span[contains(@title,' + target + ')]'
 group_title = wait.until(EC.presence_of_element_located((
